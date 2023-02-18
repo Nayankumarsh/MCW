@@ -1,0 +1,1 @@
+postgresql://mcw_user:yGOOLdxwUfgC8qROQEUIozOg6SemRuVI@dpg-cfo8b0g2i3mo4brtdgv0-a.oregon-postgres.render.com/mcw

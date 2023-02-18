@@ -1,0 +1,191 @@
+body{
+    background-image: url(https://img.freepik.com/free-vector/abstract-blue-triangle-shapes-background_1035-17551.jpg);
+    background-size: cover;
+    
+}
+.co{
+align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 47px 0
+}
+.Container1{
+    /* background-color: #4e43ca; */
+    margin: 50px auto 2px auto;
+    padding-top: 26px;
+    border-radius: 11px;
+    color: black;
+  }
+  .Container2 h3 {
+    margin:  6vh 2vw 1vh 2vw;
+    color: white;
+
+}
+
+input.title {
+    display: flex;
+margin: 0vh 2vw;
+padding: 1vh 1vw;
+width: 44vw;
+height: 6vh;
+border-radius: 14px;
+}
+
+.Description {
+  margin: 0vh 2vw 3vh 2vw;
+padding: 1vh 1vw;
+width: 44vw;
+height: 6vh;
+border-radius: 14px;
+}
+.Container2 {
+
+
+    /* margin: 3vh 0; */
+    background-color:#205653;
+    height: auto;
+    width: 48vw;
+    border-radius: 3vh;
+    
+}
+.addlist{
+    background-color: #4e43ca;
+    margin: 4vh 2vw;
+    padding: 10px 0vw;
+    width: 7vw;
+    color: white;
+    border-color: white;
+    border-radius: 6px;
+    border-width: 2px;
+ }
+ .list1{
+  background-color: #205653;
+  color: #f9ebeb;
+margin: 30px 36px;
+padding: 20px 17px;
+border-radius: 13px;
+ }
+
+ .list h2{
+    margin: 18px auto;
+ }
+ table{
+    margin: 2vh 0vw;
+padding: 2vh 0vw;
+  }
+  th, td {
+    width: 22vw;
+text-align: center;
+/* border: 0px solid; */
+padding: 4vh 1vw;
+  }
+  
+#Delete{
+    background-color: #4e43ca;
+    margin: 3vh 2vw;
+    padding: 1vh 1vw;
+    
+    color: white;
+    border-color: white;
+    border-radius: 6px;
+    border-width: 1px;
+    
+    text-decoration: none;
+  }
+  .Record{
+    text-align: center;
+margin: 30px;
+padding: 10px;
+color: black;
+font-size: 20px;
+  }
+  #manager{
+
+background: rgb(238, 84, 192);
+
+}
+div.list1{
+  margin: 18vh 36px;
+font-size: 18px;
+}
+
+
+@media screen and (max-width: 1000px) {
+  input.title,
+  .Description,
+  th,
+  td {
+    width: 80vw;
+    height: 4vh;
+  }
+  div.list1 {
+    margin: 6vh 18px;
+    font-size: 16px;
+  }
+  .list1 {
+    background-color: #205653;
+    color: #f9ebeb;
+    margin: 30px 36px;
+    padding: 25px 8px;
+    border-radius: 11px;
+  }
+  table {
+    margin: 2vh -2vw;
+    padding: 1vh 0vw;
+  }
+
+  .addlist {
+    width: 20vw;
+  }
+
+  .Container2 {
+    width: 85vw;
+  }
+  #Delete {
+    
+    margin: 0vh 2px;
+    padding: 1vh 0vw;
+  }
+  .h2 {
+    margin: 7vh auto auto auto;
+  }
+  
+}
+
+@media screen and (max-width: 480px) {
+  input.title,
+  .Description,
+  th,
+  td {
+    width: 100vw;
+    height: 4vh;
+  }
+
+  .addlist {
+    width: 30vw;
+  }
+  div.list1 {
+    margin: 6vh 18px;
+    font-size: 16px;
+  }
+  .list1 {
+    background-color: #205653;
+    color: #f9ebeb;
+    margin: 30px 36px;
+    padding: 25px 8px;
+    border-radius: 11px;
+  }
+  table {
+    margin: 2vh -2vw;
+    padding: 1vh 0vw;
+  }
+  #Delete {
+    
+    margin: 0vh 2px;
+    padding: 1vh 0vw;
+  }
+  .h2 {
+    margin: 7vh auto auto auto;
+  }
+}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title%}Manager Signup{%endblock title%}
+{% block styles %}<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Managersignup.css') }}">{% endblock styles%}
+{% block nav%}<ul id="menu">
+    <li ><a class ="navbar"  href="/Managerlogin"><button type="button" class="navbar" id="Sign" class="navbar">Sign In</button></a></li>
+</ul>{% endblock nav %}
+
+{% block body%}
+<main>
+<div class= "Container">
+    <div class="form-box">
+        <h1 id="title">Sign Up</h1>
+        <form method="POST" action="/Managersignup">
+        
+         <div class="input-group">
+
+            <div class="input-field" id="nameField">
+                <i class="fa-solid fa-shop"></i>
+                <input type ="text" placeholder="Shop Name" id = "shopname"name="Shopname">
+            </div>
+            
+             <div class="input-field">
+                <i class="fa-solid fa-envelope"></i>
+                 <input type ="Email" placeholder="Email" id="Email"name="Email">
+             </div>
+           
+            <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type ="password" placeholder="password" id="password1" name="password1">
+            </div>
+            <div class="input-field" Id="conPass">
+                <i class="fa-solid fa-lock"></i>
+                <input type ="password" placeholder="Confirm password" id="password2" name="password2">
+            </div>
+            
+            
+         
+         <div class="btn-field" style="margin: 50px 0;">
+            <button type="submit" id="signupBtn">Sign Up</button>
+            <a href ="/Managerlogin" > <button type="button" id ="signinBtn" class="disable"> Sign In</button></a>
+         </div>
+
+      </form>
+</div>
+</div>
+<main>
+
+{%endblock body%}
+{% block script %}{%endblock script%}

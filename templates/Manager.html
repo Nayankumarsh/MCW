@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title%}Manager{%endblock title%}
+{% block styles%} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Manager.css') }}">{% endblock styles%}
+{% block nav%}
+<ul id="menu">
+    <li ><a class ="navbar"  href="/Addworker"><button type="button" class="navbar" id="Sign" class="navbar">Add Worker</button></a></li>
+    <li ><a class ="navbar"  href="{{url_for('logout')}}"><button type="button" class="navbar" id="Sign" class="navbar">Logout</button></a></li>
+</ul>
+{% endblock nav %}
+
+{% block body %} 
+ <body>
+  
+        <div class="co">
+            <div class="Container1">
+            </div>
+            <h2 class ="h2">Add Customer</h2>
+            <form action="/Manager" method ="POST">
+                <div class="Container2">
+                    
+                <h3 style="padding-top: 5vh;">Name</h3>
+                
+                <input  class="title" id="title" type="text"  name = "Name" placeholder="Enter name">
+                <h3>Phone Number</h3>
+                <input type="tel"  maxlength="12" name = "Phone"
+                 class="Description" id = "Description"   placeholder="Enter Phone Number">
+                 <div style="display: flex; justify-content: space-between;">
+                <button class="addlist" id = "adde" type="submit">Add</button>
+            
+            </form>
+                
+                
+                    <button class="addlist" id ="delete-btn"  type="button">Clear All</button>
+              
+                </div>
+                
+                
+                
+                
+            </div>
+       
+        </div>
+        <div class="list1">
+            <h2>Customers</h2>
+            <table>
+                 {% if allcustomers|length==0 %}
+                 <div class="Record">No Customers found. Add Customers Details</div>
+                 <i class="fa-thin fa-empty-set"></i>
+
+                 {% else %}
+                 
+                <thead>
+                    <tr>
+                        <th>SNo</th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    {% for customers in allcustomers %}
+                    <tr>
+                        <th>{{loop.index}}</th>
+                        <td id ="Name">{{customers.Name}}</td>
+                        <td id ="Phone">{{customers.Phone}}</td>
+                        <td>{{customers.date}}</td>
+                        <td>
+                            <a href="/update/{{customers.SNo}}" id="Delete" type="button" >Update</button> 
+                                <a href="/delete/{{customers.SNo}}" id="Delete" type="button" >Delete</button>
+                                   
+                            
+                        </td>
+                       
+                    </tr>
+                    {% endfor %}
+                    
+                </tbody>
+                {% endif %}
+            </table>
+
+        </div>
+     
+</body>
+{% endblock body%}
+{%block script %} <script src="{{ url_for('static', filename='Manager.js') }}"></script>{%endblock script%}

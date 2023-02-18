@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;500&display=swap');
+
+
+* {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav {
+    display: inline-flex ;
+    z-index: 2; 
+    position: fixed;
+   
+  
+}
+#navbar{
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    position: fixed;
+}
+.navbar {
+    display: inline-flex;
+    /* position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+     */
+
+background: #3c00a0;
+color: #fff;
+border-radius: 20px;
+border: 0;
+outline: 0;
+cursor: pointer;
+
+text-decoration: none;
+margin: 14px 36px;
+padding: 1px;
+font-size: 20px;
+}
+/* nav.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:10;
+} */
+
+#menu{
+    display: flex;
+}
+
+ul{
+    list-style: none;
+}
+
+
+@media screen and (max-width: 1070px) {
+    .nav {
+        display: flex;
+align-items: center;
+    }
+  
+    .navbar {
+        margin: 19px 4px 19px 3px;
+padding: 0px 2px 0px 0px;
+font-size: 26px;
+      
+    }
+    #navbar{
+        background: #3c00a0;
+border-radius: 26px;
+margin: 23px 37px;
+padding: 0px;
+cursor: pointer;
+padding: 0px 4px 0px 4px;
+justify-content: space-between;
+top: 0;
+width: 99%;
+position: fixed;
+left: -34px;
+    }
+    #Sign {
+        padding: 19px 0px;
+      }
+      .form-box{
+        margin: -1vh auto 5vh auto;
+      }
+  }

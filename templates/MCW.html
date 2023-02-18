@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title%}Home{%endblock title%}
+{% block styles%} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='MCW.css') }}">{% endblock styles%}
+{% block nav%}<ul id="menu">
+    <li ><a class ="navbar"  href="/Managerlogin"><button type="button" class="navbar" id="Sign" class="navbar">Sign In</button></a></li>
+</ul>{% endblock nav %}
+{% block body %} 
+ <div class="Container">
+    <div class = "Container1">
+        <h1>Welcome to 
+            <span style = "color:rgb(126 34 206)">MCW</span></h1>
+        <br>
+        <p>Our business web application is designed to help service providers manage their queues more efficiently and provide a better customer experience. Our app is perfect for salons, hospitals, clinics, and other service providers who want to save their customers' time and improve their overall experience.</p>
+
+            <p>With our application, service providers can add customer details to a queue, and customers can see when their service is ready, without having to wait in line or ask the service providers for updates. By implementing a first come, first served principle, our app ensures fairness and transparency in the queue management process.</p>
+            
+        <p>Additionally, our application allows service providers to store worker details, helping them manage their staff more effectively. By improving the efficiency of the queue management process and reducing waiting times, our application can help businesses grow and attract new customers.</p>
+            
+           <p> At our company, we understand that time is valuable, and we believe our app can make a significant impact on businesses and their customers. Join us and start providing the best possible service to your customers today.
+        </p>
+    </div>
+    <div class="Container2">
+ <img src="https://www.pngmart.com/files/7/Business-Background-PNG.png">
+    </div>
+ </div>
+{% endblock body%}

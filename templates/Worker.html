@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title%}Worker{%endblock title%}
+{% block styles%} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Manager.css') }}">{% endblock styles%}
+{% block wor %} <li ><a  class="navbar" style ="background: rgb(238, 84, 192);" id = "worker" href="/Workerlogin"><button type="button"  class="navbar">Worker</button></a></li> {% endblock wor%}
+{% block na%}     <li><a class="navbar" style = "padding: 0px;"  href="/Managersignup"><button type="button"  class="navbar">Manager</button></a></li>{% endblock na%}
+{% block nav%}
+<ul id="menu">
+    
+    <li ><a class ="navbar"  href="{{url_for('logout')}}"><button type="button" class="navbar" id="Sign" class="navbar">Logout</button></a></li>
+</ul>
+{% endblock nav %}
+
+{% block body %} 
+ <body>
+  
+        
+        <div class="list1" style = "margin: 18vh 36px;">
+            <h2>Customers</h2>
+            <table>
+                 {% if allcustomers|length==0 %}
+                 <div class="Record">No Customers found. Add Customers Details</div>
+                 <i class="fa-thin fa-empty-set"></i>
+
+                 {% else %}
+                 
+                <thead>
+                    <tr>
+                        <th>SNo</th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    {% for customers in allcustomers %}
+                    <tr>
+                        <th>{{loop.index}}</th>
+                        <td id ="Name">{{customers.Name}}</td>
+                        <td id ="Phone">{{customers.Phone}}</td>
+                        <td>{{customers.date}}</td>
+                        <td>
+                            
+                                <a href="/Cdelete/{{customers.SNo}}" id="Delete" type="button" >Delete</button>
+                                   
+                            
+                        </td>
+                       
+                    </tr>
+                    {% endfor %}
+                    
+                </tbody>
+                {% endif %}
+            </table>
+
+        </div>
+     
+</body>
+{% endblock body%}

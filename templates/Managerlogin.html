@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title%}Manager Login{%endblock title%}
+{% block styles %}<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Managerlogin.css') }}">{% endblock styles%}
+{% block nav%}<ul id="menu">
+    <li ><a class ="navbar"  href="/Managersignup"><button type="button" class="navbar" id="Sign" class="navbar">Sign Up</button></a></li>
+</ul>{% endblock nav %}
+
+{% block body%}
+<main>
+<div class= "Container">
+    <div class="form-box">
+        <h1 id="title">Sign In</h1>
+        <form  action="/Managerlogin" method="POST" >
+       
+         <div class="input-group">
+
+            <div class="input-field" id="nameField">
+                <i class="fa-solid fa-shop"></i>
+                <input type ="text" placeholder="Shop Name" id = "shopname"name="Shopname">
+            </div>
+            
+             
+           
+            <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type ="password" placeholder="password" name="password">
+            </div>
+            
+            <p>Lost password <a href="#" >Click Here!</a></p>
+            
+         </div>
+         <div class="btn-field" style="margin-top: 30px;">
+            <button type="submit" id="signinBtn"  >Sign In</button>
+            <a href ="/Managersignup" > <button type="button" id ="signupBtn" class="disable"> Sign Up</button></a>
+         </div>
+
+      </form>
+</div>
+</div>
+<main>
+
+{%endblock body%}
+{% block script %}{%endblock script%}

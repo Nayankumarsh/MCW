@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title%}Add Worker{%endblock title%}
+{% block styles%} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='AddWorker.css') }}">{% endblock styles%}
+{% block na%} <li><a class="navbar"  id ="manager" href="/Manager"><button type="button"  class="navbar">Manager</button></a></li>{% endblock na %}
+{% block nav%}
+<ul id="menu">
+    <li ><a class ="navbar"  href="/Addworker"><button type="button" class="navbar"  id = "Addworker"class="navbar">Add Worker</button></a></li>
+    <li ><a class ="navbar"  href="/Logout"><button type="button" class="navbar" id="Sign" class="navbar">Logout</button></a></li>
+</ul>
+{% endblock nav %}
+
+{% block body %} 
+ <body>
+  
+        <div class="co">
+            <div class="Container1">
+                <h2 class="h2">Add Worker</h2>
+            </div>
+            <form action="/Addworker" method ="POST">
+            <div class="Container2">
+    
+                
+                <h3 style="padding-top: 5vh;">Name</h3>
+                
+                <input  class="title" id="title" type="text"  name = "Name1" placeholder="Enter name">
+                <h3>Phone Number</h3>
+                <input type="tel"  maxlength="12" name = "Phone1"
+                 class="Description" id = "Description"   placeholder="Enter Phone Number">
+                 <div style="display: flex; justify-content: space-between;">
+                <button class="addlist" id = "adde" type="submit">Add</button>
+            
+            </form>
+                
+                <form action="/workers/Wdelete" method="DELETE">
+                    <button class="addlist" id ="delete-btn"  type="button">Clear All</button>
+                </form>
+                    
+                </div>
+                
+                
+                
+                
+            </div>
+       
+        </div>
+        <div class="list1">
+            <h2>Workers</h2>
+            <table>
+                 {% if allworkers|length==0 %}
+                 <div class="Record">No Workers found. Add Workers Details</div>
+                 <i class="fa-thin fa-empty-set"></i>
+
+                 {% else %}
+                 
+                <thead>
+                    <tr>
+                        <th>SNo</th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    {% for workers in allworkers %}
+                    <tr>
+                        <th>{{loop.index}}</th>
+                        <td id ="Name">{{workers.Name1}}</td>
+                        <td id ="Phone">{{workers.Phone1}}</td>
+                        <td>{{workers.date}}</td>
+                        <td>
+                            <a href="/Wupdate/{{workers.SNo}}" id="Delete" type="button" >Update</button> 
+                                <a href="/Wdelete/{{workers.SNo}}" id="Delete" type="button" >Delete</button>
+                                   
+                            
+                        </td>
+                       
+                    </tr>
+                    {% endfor %}
+                    
+                </tbody>
+                {% endif %}
+            </table>
+
+        </div>
+     
+</body>
+{% endblock body%}
+{%block script %} <script src="{{ url_for('static', filename='Wupdate.js') }}"></script>{%endblock script%}

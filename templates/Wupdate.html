@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title%}worker Update{%endblock title%}
+{% block styles%} <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Manager.css') }}">{% endblock styles%}
+{% block nav%}<ul id="menu">
+    <li ><a class ="navbar"  href="/Managerlogin"><button type="button" class="navbar" id="Sign" class="navbar">Logout</button></a></li>
+</ul>{% endblock nav %}
+{% block body %} 
+ <body>
+  
+        <div class="co">
+            <div class="Container1">
+                <h2>Update Worker</h2>
+            </div>
+            <form action="/Wupdate/{{workers.SNo}}" method ="POST">
+            <div class="Container2">
+    
+                <h3 style="padding-top: 5vh;">Name</h3>
+                
+                <input  class="title" id="title" type="text"  name = "Name1" placeholder="Enter name" value = "{{workers.Name1}}">
+                <h3>Phone Number</h3>
+                <input type="tel"  maxlength="12" name = "Phone1"
+                 class="Description" id = "Description"   placeholder="Enter Phone Number" value = "{{workers.Phone1}}">
+                 <div style="display: flex; justify-content: space-between;">
+                <button class="addlist" id = "adde" type="submit">Add</button>
+            
+            </form>
+                
+                
+                </div>
+                
+                
+                
+                
+            </div>
+       
+        </div>
+       
+     
+</body>
+{% endblock body%}

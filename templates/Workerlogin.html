@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title%}Workerlogin{%endblock title%}
+{% block styles %}<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Customerlogin.css') }}">{% endblock styles%}
+{% block wor %} <li ><a  class="navbar" style =  "background: rgb(238, 84, 192); "id = "worker" href="/Workerlogin"><button type="button"  class="navbar">Worker</button></a></li> {% endblock wor%}
+{% block nav%}<ul id="menu">
+    <li ><a class ="navbar"  href="/Managersignup"><button type="button" class="navbar" id="Sign" class="navbar">Sign Up</button></a></li>
+</ul>{% endblock nav %}
+{% block body%}
+<main>
+<div class= "Container">
+    <div class="form-box">
+        <h1 id="title">Sign In</h1>
+        <form method="post" action="/Workerlogin">
+       
+         <div class="input-group">
+
+            <div class="input-field" id="nameField">
+                <i class="fa-solid fa-shop"></i>
+                <input type ="text" placeholder="Shop Name" name = "Shopname">
+            </div>
+            <div class="input-field" id="nameField">
+                <i class="fa-solid fa-user"></i>
+                <input type ="text" placeholder="Name" name = "Name1">
+            </div>
+            
+            
+         </div>
+         <div class="btn-field">
+            <button type="submit" id="signupBtn">Sign In</button>
+            
+         </div>
+
+      </form>
+</div>
+</div>
+<main>
+
+{%endblock body%}
+{% block script %}{%endblock script%}

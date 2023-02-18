@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title%}Customer{%endblock title%}
+{% block styles%} 
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Manager.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Customerlogin.css') }}">
+{% endblock styles%}
+{% block cus %} <li ><a class="navbar"  style =  "background: rgb(238, 84, 192);" id = "customer"href="/Customerlogin"><button type="button"  class="navbar">Customer</button></a></li>{% endblock cus %}
+{% block na%}     <li><a class="navbar" style = "padding: 0px;"  href="/Managersignup"><button type="button"  class="navbar">Manager</button></a></li>{% endblock na%}
+{% block nav%}
+<ul id="menu">
+    
+    <li ><a class ="navbar"  href="{{url_for('logout')}}"><button type="button" class="navbar" id="Sign" class="navbar">Logout</button></a></li>
+</ul>
+{% endblock nav %}
+
+{% block body %} 
+ <body>
+  
+        
+        <div class="list1" style = "margin: 18vh 36px;">
+            <h2>Customers</h2>
+            <table>
+            {% if allcustomers|length==0 %}
+                <div class="Record">No Customers found. Add Customers Details</div>
+                <i class="fa-thin fa-empty-set"></i>
+
+            {% else %}
+                 
+                <thead>
+                    <tr>
+                        <th>SNo</th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Date</th>
+
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    {% for customers in allcustomers %}
+                   
+                        <tr>
+                            <th class="customer-details">{{loop.index}}</th>
+                            <td class="customer-details" id ="Named">{{customers.Name}}</td>
+                            <td class="customer-details" id ="Phone">{{customers.Phone}}</td>
+                            <td class="customer-details">{{customers.date}}</td>
+                        </tr>
+                    
+                {% endfor %}
+                    
+                </tbody>
+            {% endif %}
+            </table>
+
+        </div>
+     
+</body>
+{% endblock body%}
+{% block script %}<script src="{{ url_for('static', filename='Customerlogin.js') }}">{%endblock script%}
