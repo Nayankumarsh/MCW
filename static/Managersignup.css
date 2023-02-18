@@ -16,8 +16,8 @@ body{
    
     padding-bottom: 120px;
     border-radius: 20px;
-    margin: 5vh auto 5vh auto;
-    position: fixed;
+    margin: 20vh auto 5vh auto;
+    position: absolute;
   z-index: 1; 
     
 }
@@ -121,6 +121,13 @@ form p a{
   
   @media screen and (max-width: 1000px) {
       .form-box{
-          top:36%;
+          top:54%;
+          margin: auto auto auto auto;
       }
+    }
+  @media screen and (max-width: 547px) {
+    .form-box {
+      top: 46%;
+      margin: auto auto auto auto;
+    }
     }

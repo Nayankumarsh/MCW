@@ -40,7 +40,7 @@ outline: 0;
 cursor: pointer;
 
 text-decoration: none;
-margin: 14px 36px;
+margin: 14px 21px;
 padding: 1px;
 font-size: 20px;
 }
@@ -90,5 +90,42 @@ left: -34px;
       }
       .form-box{
         margin: -1vh auto 5vh auto;
+      }
+  }
+
+@media screen and (max-width: 706px) {
+    .nav {
+        display: flex;
+align-items: center;
+    }
+  
+    .navbar {
+        margin: 5px -3px 6px 4px;
+        padding: 0px 6px 0px 0px;
+        font-size: 12px;
+      }
+    #navbar{
+        background: #3c00a0;
+border-radius: 26px;
+margin: 23px 37px;
+padding: 0px;
+cursor: pointer;
+padding: 0px 4px 0px 4px;
+justify-content: space-between;
+top: 0;
+width: 99%;
+position: fixed;
+left: -34px;
+    }
+    #Sign {
+        padding: 19px 0px;
+      }
+      .form-box{
+        margin: -1vh auto 5vh auto;
+      }
+      #Addworker {
+        padding: 6px;
+        background: rgb(238, 84, 192);
+        margin: 19px auto auto auto;
       }
   }

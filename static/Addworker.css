@@ -65,13 +65,14 @@ color: white;
 margin: 30px 36px;
 padding: 20px 17px;
 border-radius: 13px;
+font-size: small;
  }
 
  .list h2{
     margin: 18px auto;
  }
  table{
-    margin: 2vh 0vw;
+  margin: 3vh 1vw auto -5vw;
 padding: 2vh 0vw;
   }
   th, td {
@@ -144,48 +145,37 @@ background: rgb(238, 84, 192);
   .h2 {
     margin: 7vh auto auto auto;
   }
+  #Addworker {
+    padding: 6px;
+    background: rgb(238, 84, 192);
+    margin: 32px auto auto auto;
+  }
   
 }
 
-@media screen and (max-width: 480px) {
-  input.title,
-  .Description,
-  th,
-  td {
-    width: 100vw;
+
+@media screen and (max-width: 680px){
+  input.title, .Description, th, td {
+    /* width: 0vw; */
     height: 4vh;
   }
-  navbar {
-    margin: 27px 5px;
-    padding: 0px 3px 0px 2px;
-    font-size: 25px;
-  
-}
-
-  .addlist {
-    width: 30vw;
-  }
-  div.list1 {
-    margin: 6vh 18px;
-    font-size: 16px;
-  }
-  .list1 {
-    background-color: #205653;
-    color: #f9ebeb;
-    margin: 30px 36px;
-    padding: 25px 8px;
-    border-radius: 11px;
-  }
-  table {
-    margin: 2vh -2vw;
-    padding: 1vh 0vw;
-  }
-  #Delete {
-    
-    margin: 0vh 2px;
-    padding: 1vh 0vw;
-  }
   .h2 {
-    margin: 7vh auto auto auto;
+    margin: 3vh auto auto auto;
   }
-}
+
+  table {
+    margin: -1vh -3vw auto -6vw;
+    padding: 1vh 0vw;
+  }
+
+  div.list1 {
+    margin: 5vh 12px;
+    font-size: 8px;
+  }
+
+  #Addworker {
+    padding: 6px;
+    background: rgb(238, 84, 192);
+    margin: 19px auto auto auto;
+  }
+  }

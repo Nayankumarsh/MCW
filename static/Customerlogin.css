@@ -5,7 +5,8 @@ body{
 
 .form-box{
     width: 90%;
-    position: fixed;
+    margin: 20vh auto 5vh auto;
+    position: absolute;
     top: 52%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -94,6 +95,12 @@ form p a{
         top:40%;
     }
   }
+  @media screen and (max-width: 547px) {
+    .form-box {
+      top: 46%;
+      margin: auto auto auto auto;
+    }
+    }
   
   
   
