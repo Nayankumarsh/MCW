@@ -131,3 +131,9 @@ form p a{
       margin: auto auto auto auto;
     }
     }
+  @media screen and (max-height: 500px) {
+    .form-box {
+      top: 100%;
+      margin: auto auto auto auto;
+    }
+    }

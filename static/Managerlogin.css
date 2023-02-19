@@ -133,9 +133,16 @@ button#signinBtn.disable {
     }
 }
 
-@media screen and (max-width: 547px) {
+
+@media screen and (max-width: 547px)  {
     .form-box {
         top: 50%;
+        margin: auto auto auto auto;
+    }
+}
+@media screen and (max-height: 500px)  {
+    .form-box {
+        top: 100%;
         margin: auto auto auto auto;
     }
 }
