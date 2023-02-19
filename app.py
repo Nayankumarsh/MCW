@@ -327,7 +327,7 @@ class Customers(db.Model):
     Name = db.Column(db.String(200), nullable=False)
     Phone = db.Column(db.String(200), nullable=False)
     date = db.Column(db.DateTime, default=datetime.utcnow)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True) 
+    user_id = db.Column(db.String(200), db.ForeignKey('user.id'), nullable=True) 
 
     def __repr__(self) -> str:
         return f"{self.SNo} - {self.Name}"
@@ -343,7 +343,7 @@ class Addworker(db.Model):
     Name1 = db.Column(db.String(200), nullable=False)
     Phone1 = db.Column(db.String(200), nullable=False)
     date = db.Column(db.DateTime, default=datetime.utcnow)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True) 
+    user_id = db.Column(db.String(200), db.ForeignKey('user.id'), nullable=True) 
 
     def __repr__(self) -> str:
         return f"{self.SNo} - {self.Name1}"
