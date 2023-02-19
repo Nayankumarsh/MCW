@@ -297,11 +297,13 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://mcw_user:yGOOLdxwUfgC8qROQEUIozOg6SemRuVI@dpg-cfo8b0g2i3mo4brtdgv0-a.oregon-postgres.render.com/mcw"
 # postgres://mcw_user:yGOOLdxwUfgC8qROQEUIozOg6SemRuVI@dpg-cfo8b0g2i3mo4brtdgv0-a.oregon-postgres.render.com/mcw
 
 db = SQLAlchemy(app)
+
 app.secret_key = 'you'
 
 
@@ -323,7 +325,7 @@ class Customers(db.Model):
     
     SNo = db.Column(db.Integer, primary_key=True)
     Name = db.Column(db.String(200), nullable=True)
-    Phone = db.Column(db.Integer, nullable=True)
+    Phone = db.Column(db.BigInteger, nullable=True)
     date = db.Column(db.DateTime, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True) 
 
@@ -339,7 +341,7 @@ class Addworker(db.Model):
     
     SNo = db.Column(db.Integer, primary_key=True)
     Name1 = db.Column(db.String(200), nullable=True)
-    Phone1 = db.Column(db.Integer, nullable=True)
+    Phone1 = db.Column(db.BigInteger, nullable=True)
     date = db.Column(db.DateTime, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True) 
 
@@ -419,8 +421,10 @@ def Manager():
             db.session.add(customers)
             db.session.commit()
             
-        except:
+        except Exception as e:
             db.session.rollback()
+            print(f"An error occured:{e}")
+
     allcustomers = Customers.query.all()
 
     return render_template("Manager.html", allcustomers=allcustomers)
@@ -478,8 +482,9 @@ def Addworkers():
              db.session.add(workers)
              db.session.commit()
             
-        except:
+        except Exception as e:
             db.session.rollback()
+            print(f"An error occured:{e}")
 
     allworkers = Addworker.query.all()
 
