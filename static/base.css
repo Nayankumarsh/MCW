@@ -12,18 +12,20 @@
 
 
 nav {
-    display: inline-flex ;
-    z-index: 2; 
+    display: inline-flex;
+    z-index: 2;
     position: fixed;
-   
-  
+
+
 }
-#navbar{
+
+#navbar {
     justify-content: space-between;
     top: 0;
     width: 100%;
     position: fixed;
 }
+
 .navbar {
     display: inline-flex;
     /* position: sticky;
@@ -32,18 +34,19 @@ nav {
     width: 100%;
      */
 
-background: #3c00a0;
-color: #fff;
-border-radius: 20px;
-border: 0;
-outline: 0;
-cursor: pointer;
+    background: #3c00a0;
+    color: #fff;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
 
-text-decoration: none;
-margin: 14px 21px;
-padding: 1px;
-font-size: 20px;
+    text-decoration: none;
+    margin: 14px 21px;
+    padding: 1px;
+    font-size: 20px;
 }
+
 /* nav.sticky{
     position: fixed;
     top: 0;
@@ -51,11 +54,11 @@ font-size: 20px;
     z-index:10;
 } */
 
-#menu{
+#menu {
     display: flex;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
@@ -63,69 +66,76 @@ ul{
 @media screen and (max-width: 1070px) {
     .nav {
         display: flex;
-align-items: center;
+        align-items: center;
     }
-  
+
     .navbar {
         margin: 19px 4px 19px 3px;
-padding: 0px 2px 0px 0px;
-font-size: 26px;
-      
+        padding: 0px 2px 0px 0px;
+        font-size: 26px;
+
     }
-    #navbar{
+
+    #navbar {
         background: #3c00a0;
-border-radius: 26px;
-margin: 23px 37px;
-padding: 0px;
-cursor: pointer;
-padding: 0px 4px 0px 4px;
-justify-content: space-between;
-top: 0;
-width: 99%;
-position: fixed;
-left: -34px;
+        border-radius: 26px;
+        margin: 23px 37px;
+        padding: 0px;
+        cursor: pointer;
+        padding: 0px 4px 0px 4px;
+        justify-content: space-between;
+        top: 0;
+        width: 99%;
+        position: fixed;
+        left: -34px;
     }
+
     #Sign {
         padding: 19px 0px;
-      }
-      .form-box{
+    }
+
+    .form-box {
         margin: -1vh auto 5vh auto;
-      }
-  }
+    }
+}
 
 @media screen and (max-width: 706px) {
     .nav {
         display: flex;
-align-items: center;
+        align-items: center;
     }
-  
+
     .navbar {
         margin: 5px -3px 6px 4px;
         padding: 0px 6px 0px 0px;
         font-size: 12px;
-      }
-    #navbar{
-        background: #3c00a0;
-border-radius: 26px;
-margin: 23px 37px;
-padding: 0px;
-cursor: pointer;
-padding: 0px 4px 0px 4px;
-justify-content: space-between;
-top: 0;
-width: 99%;
-position: fixed;
-left: -34px;
     }
+
+    #navbar {
+        background: #3c00a0;
+        border-radius: 26px;
+        margin: 23px 37px;
+        padding: 0px;
+        cursor: pointer;
+        padding: 0px 4px 0px 4px;
+        justify-content: space-between;
+        top: 0;
+        width: 99%;
+        position: fixed;
+        left: -34px;
+    }
+
     #Sign {
         padding: 19px 0px;
-      }
-      .form-box{
+    }
+
+    .form-box {
         margin: -1vh auto 5vh auto;
-      }
-      #Addworker {
+    }
+
+    #Addworker {
         padding: 6px;
         background: rgb(238, 84, 192);
         margin: 19px auto auto auto;
-      }
-  }
+    }
+}

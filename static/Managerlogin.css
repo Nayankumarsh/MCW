@@ -1,33 +1,33 @@
-
-body{
+body {
     background-color: #74c0fc;
 }
 
-.form-box{
+.form-box {
     width: 90%;
     margin: 20vh auto 5vh auto;
     position: absolute;
     top: 52%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background: #fff;
     padding: 50px 60px 70px;
     text-align: center;
     max-width: 450px;
-    
-    z-index: 1; 
+
+    z-index: 1;
     /* padding-bottom: 120px; */
     border-radius: 20px;
-    
+
 }
-.form-box h1{
+
+.form-box h1 {
     font-size: 30px;
     margin-bottom: 50px;
     color: #3c00a0;
     position: relative;
 }
 
-.form-box h1::after{
+.form-box h1::after {
     content: "";
     width: 40px;
     height: 4px;
@@ -38,7 +38,8 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
-.input-field{
+
+.input-field {
     background: #eaeaea;
     margin: 15px 0;
     border-radius: 3px;
@@ -48,33 +49,39 @@ body{
     transition: max-height 0.5s;
     overflow: hidden;
 }
-input{
+
+input {
     width: 100%;
     background: transparent;
     border: 0;
     outline: 0;
     padding: 18px 15px;
 }
-.input-field i{
+
+.input-field i {
     margin-left: 15px;
     /* color: #999; */
 
 }
-form p{
+
+form p {
     text-align: left;
     font-size: 13px;
 }
-form p a{
+
+form p a {
     text-decoration: none;
     color: #3c00a0;
 }
-.btn-field{
+
+.btn-field {
     width: 100%;
     display: flex;
     justify-content: space-between;
     /* margin: 30px; */
 }
-.btn-field button{
+
+.btn-field button {
     flex-basis: 48%;
     background: #3c00a0;
     color: #fff;
@@ -83,18 +90,19 @@ form p a{
     border: 0;
     outline: 0;
     cursor: pointer;
-    transition:background 1s;
-  }
-  
-  .input-group{
+    transition: background 1s;
+}
+
+.input-group {
     height: 280px;
-  }
-  
-  .btn-field button.disable{
+}
+
+.btn-field button.disable {
     background: #eaeaea;
     color: #555;
-  }
-  .btn-field a {
+}
+
+.btn-field a {
     flex-basis: 48%;
     background: #eaeaea;
     color: #555;
@@ -103,29 +111,31 @@ form p a{
     border: 0;
     outline: 0;
     cursor: pointer;
-    transition:background 1s;
+    transition: background 1s;
 
-  }
-  button#signinBtn.disable{
+}
+
+button#signinBtn.disable {
     background-color: #eaeaea;
     color: #555;
 
-  }
+}
 
-#Sign{
+#Sign {
 
-background: rgb(238, 84, 192);
+    background: rgb(238, 84, 192);
 }
 
 @media screen and (max-width: 1000px) {
-    .form-box{
-        top:54%;
+    .form-box {
+        top: 54%;
         margin: auto auto auto auto;
     }
-  }
-  @media screen and (max-width: 547px) {
+}
+
+@media screen and (max-width: 547px) {
     .form-box {
-      top: 46%;
-      margin: auto auto auto auto;
+        top: 50%;
+        margin: auto auto auto auto;
     }
-    }
+}

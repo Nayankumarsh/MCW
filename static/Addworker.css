@@ -1,112 +1,124 @@
-body{
-    background-image: url(https://img.freepik.com/free-vector/abstract-blue-triangle-shapes-background_1035-17551.jpg);
-    background-size: cover;
-    
+body {
+  background-image: url(https://img.freepik.com/free-vector/abstract-blue-triangle-shapes-background_1035-17551.jpg);
+  background-size: cover;
+
 }
-.co{
-align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    margin: 47px 0
+
+.co {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 47px 0
 }
-.Container1{
-    /* background-color: #4e43ca; */
-    margin: 50px auto 2px auto;
-    padding-top: 26px;
-    border-radius: 11px;
-    color: black;
-  }
-  .Container2 h3 {
-    margin:  6vh 2vw 1vh 2vw;
-    color: white;
+
+.Container1 {
+  /* background-color: #4e43ca; */
+  margin: 50px auto 2px auto;
+  padding-top: 26px;
+  border-radius: 11px;
+  color: black;
+}
+
+.Container2 h3 {
+  margin: 6vh 2vw 1vh 2vw;
+  color: white;
 
 }
 
 input.title {
-    display: flex;
-margin: 0vh 2vw;
-padding: 1vh 1vw;
-width: 44vw;
-height: 6vh;
-border-radius: 14px;
+  display: flex;
+  margin: 0vh 2vw;
+  padding: 1vh 1vw;
+  width: 44vw;
+  height: 6vh;
+  border-radius: 14px;
 }
 
 .Description {
   margin: 0vh 2vw 3vh 2vw;
-padding: 1vh 1vw;
-width: 44vw;
-height: 6vh;
-border-radius: 14px;
+  padding: 1vh 1vw;
+  width: 44vw;
+  height: 6vh;
+  border-radius: 14px;
 }
+
 .Container2 {
 
 
-    /* margin: 3vh 0; */
-    background-color:#205653;
-    height: auto;
-    width: 48vw;
-    border-radius: 3vh;
-    
-}
-.addlist{
-    background-color: #4e43ca;
-    margin: 4vh 2vw;
-    padding: 10px 0vw;
-    width: 7vw;
-    color: white;
-    border-color: white;
-    border-radius: 6px;
-    border-width: 2px;
- }
- .list1{
-    background-color:  #205653;
-color: white;
-margin: 30px 36px;
-padding: 20px 17px;
-border-radius: 13px;
-font-size: small;
- }
+  /* margin: 3vh 0; */
+  background-color: #205653;
+  height: auto;
+  width: 48vw;
+  border-radius: 3vh;
 
- .list h2{
-    margin: 18px auto;
- }
- table{
+}
+
+.addlist {
+  background-color: #4e43ca;
+  margin: 4vh 2vw;
+  padding: 10px 0vw;
+  width: 7vw;
+  color: white;
+  border-color: white;
+  border-radius: 6px;
+  border-width: 2px;
+}
+
+.list1 {
+  background-color: #205653;
+  color: white;
+  margin: 30px 36px;
+  padding: 20px 17px;
+  border-radius: 13px;
+  font-size: small;
+}
+
+.list h2 {
+  margin: 18px auto;
+}
+
+table {
   margin: 3vh 1vw auto -5vw;
-padding: 2vh 0vw;
-  }
-  th, td {
-    width: 22vw;
-text-align: center;
-/* border: 0px solid; */
-padding: 4vh 1vw;
-  }
-  
-#Delete{
-    background-color: #4e43ca;
-    margin: 3vh 2vw;
-    padding: 1vh 1vw;
-    
-    color: white;
-    border-color: white;
-    border-radius: 6px;
-    border-width: 1px;
-    
-    text-decoration: none;
-  }
-  .Record{
-    text-align: center;
-margin: 30px;
-padding: 10px;
-color: black;
-font-size: 20px;
-  }
-  #Addworker{
-padding: 6px;
-background: rgb(238, 84, 192);
+  padding: 2vh 0vw;
+}
+
+th,
+td {
+  width: 22vw;
+  text-align: center;
+  /* border: 0px solid; */
+  padding: 4vh 1vw;
+}
+
+#Delete {
+  background-color: #4e43ca;
+  margin: 3vh 2vw;
+  padding: 1vh 1vw;
+
+  color: white;
+  border-color: white;
+  border-radius: 6px;
+  border-width: 1px;
+
+  text-decoration: none;
+}
+
+.Record {
+  text-align: center;
+  margin: 30px;
+  padding: 10px;
+  color: black;
+  font-size: 20px;
+}
+
+#Addworker {
+  padding: 6px;
+  background: rgb(238, 84, 192);
 }
 
 @media screen and (max-width: 1000px) {
+
   input.title,
   .Description,
   th,
@@ -114,10 +126,12 @@ background: rgb(238, 84, 192);
     width: 80vw;
     height: 4vh;
   }
+
   div.list1 {
     margin: 6vh 18px;
     font-size: 16px;
   }
+
   .list1 {
     background-color: #205653;
     color: #f9ebeb;
@@ -125,6 +139,7 @@ background: rgb(238, 84, 192);
     padding: 25px 8px;
     border-radius: 11px;
   }
+
   table {
     margin: 2vh -2vw;
     padding: 1vh 0vw;
@@ -137,28 +152,36 @@ background: rgb(238, 84, 192);
   .Container2 {
     width: 85vw;
   }
+
   #Delete {
-    
+
     margin: 0vh 2px;
     padding: 1vh 0vw;
   }
+
   .h2 {
     margin: 7vh auto auto auto;
   }
+
   #Addworker {
     padding: 6px;
     background: rgb(238, 84, 192);
     margin: 32px auto auto auto;
   }
-  
+
 }
 
 
-@media screen and (max-width: 680px){
-  input.title, .Description, th, td {
+@media screen and (max-width: 680px) {
+
+  input.title,
+  .Description,
+  th,
+  td {
     /* width: 0vw; */
     height: 4vh;
   }
+
   .h2 {
     margin: 3vh auto auto auto;
   }
@@ -178,4 +201,4 @@ background: rgb(238, 84, 192);
     background: rgb(238, 84, 192);
     margin: 19px auto auto auto;
   }
-  }
+}
