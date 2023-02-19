@@ -300,7 +300,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://mcw_user:yGOOLdxwUfgC8qROQEUIozOg6SemRuVI@dpg-cfo8b0g2i3mo4brtdgv0-a.oregon-postgres.render.com/mcw"
-# postgres://mcw_user:yGOOLdxwUfgC8qROQEUIozOg6SemRuVI@dpg-cfo8b0g2i3mo4brtdgv0-a.oregon-postgres.render.com/mcw
+# postgresql://mcw_user:yGOOLdxwUfgC8qROQEUIozOg6SemRuVI@dpg-cfo8b0g2i3mo4brtdgv0-a.oregon-postgres.render.com/mcw
 
 db = SQLAlchemy(app)
 
@@ -327,7 +327,7 @@ class Customers(db.Model):
     Name = db.Column(db.String(200), nullable=False)
     Phone = db.Column(db.String(200), nullable=False)
     date = db.Column(db.DateTime, default=datetime.utcnow)
-    user_id = db.Column(db.String(200), db.ForeignKey('user.id'), nullable=True) 
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True) 
 
     def __repr__(self) -> str:
         return f"{self.SNo} - {self.Name}"
@@ -343,7 +343,7 @@ class Addworker(db.Model):
     Name1 = db.Column(db.String(200), nullable=False)
     Phone1 = db.Column(db.String(200), nullable=False)
     date = db.Column(db.DateTime, default=datetime.utcnow)
-    user_id = db.Column(db.String(200), db.ForeignKey('user.id'), nullable=True) 
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True) 
 
     def __repr__(self) -> str:
         return f"{self.SNo} - {self.Name1}"
