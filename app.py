@@ -325,7 +325,7 @@ class Customers(db.Model):
     
     SNo = db.Column(db.Integer, primary_key=True)
     Name = db.Column(db.String(200), nullable=True)
-    Phone = db.Column(db.BigInteger, nullable=True)
+    Phone = db.Column(db.String(20), nullable=True)
     date = db.Column(db.DateTime, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True) 
 
@@ -341,7 +341,7 @@ class Addworker(db.Model):
     
     SNo = db.Column(db.Integer, primary_key=True)
     Name1 = db.Column(db.String(200), nullable=True)
-    Phone1 = db.Column(db.BigInteger, nullable=True)
+    Phone1 = db.Column(db.String(20), nullable=True)
     date = db.Column(db.DateTime, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True) 
 
