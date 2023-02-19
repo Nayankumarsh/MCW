@@ -308,7 +308,7 @@ app.secret_key = 'you'
 
 
 
-class User(db.Model):
+class User(db.Model): 
     
     id = db.Column(db.Integer, primary_key=True)
     Shopname = db.Column(db.String(20), nullable=False)
